@@ -5,19 +5,510 @@ Description: Gata Flora Theme
 Version: 0.1
 Text Domain: gatafloratheme
 */
+@font-face {
+    font-family: "DinProRegular";
+    src: url("resources/fonts/DINPro.otf");
+}
+@font-face {
+    font-family: "DinProMedium";
+    src: url("resources/fonts/DINPro-Medium.otf");
+}
+@font-face {
+    font-family: "DinProCondensed";
+    src: url("resources/fonts/DINPro-CondMedium.otf");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "DinProCondensed";
+    src: url("resources/fonts/DINPro-CondBlack.otf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "DinProCondensed";
+    src: url("resources/fonts/DINPro-CondBold.otf");
+    font-weight: bold;
+}
+*{
+    font-family: 'DinProRegular', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    font-size: 1rem;
+}
 body,html{
     width: 100%;
     height: 100%;
     position: relative;
+    margin:0;
 }
 #page{
     width: 100%;
     height: 100%;
     position: relative;
 }
+section{
+    width: auto;
+    width: calc(100% - 70px);
+    height: 500px;
+    display: flex;
+    position: relative;
+    margin-left: 70px;
+}
+img{
+    object-fit: contain;
+    width: 100%;
+}
+.small-logo{
+    width: auto;
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 /* Header */
-#masthead{
-    background-color: black;
-    width: 300px;
+.site-header{
+    background-color: white;
+    width: 70px;
     height: 100%;
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+.red-logo{
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.digital-factory{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    transform: rotate(-90deg);
+    position: absolute;
+    top:35%;
+}
+.menu{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    top:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+.digital-factory-menu{
+    display: flex;
+    margin-top: 20%;
+    width: 100%;
+    padding-inline-start: 40px;
+}
+.main-menu-list{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.main-menu-item{
+    font-family: 'DinProRegular', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    min-height: 1.5rem;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+.menu-image{
+    position: absolute;
+}
+.hidden-menu{
+    position: absolute;
+    height: 400px;
+    width: 250px;
+    background-color: white;
+    top: -320px;
+    left: 70px;
+    opacity: 0;
+    display:none;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+}
+.closed{
+    opacity:0;
+}
+.open{
+    opacity:1;
+}
+.show-hidden-menu{
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+}
+/* Content */
+.site-content{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: royalblue;
+}
+/* Banner */
+.banner-section{
+    background: black;
+}
+.banner-logo{
+    position: absolute;
+    left:50%;
+    top:10%;
+    transform: translateX(-40%);
+    display: flex;
+    z-index: 2;
+}
+.banner-image{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.banner-text{
+    position: absolute;
+    left:50%;
+    bottom:15%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 2;
+    color:white;
+    flex-direction: column;
+    text-align: center;
+    width: 25vw;
+}
+.banner-title > h2{
+    font-family: "DinProCondensed", Arial, Helvetica;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.banner-subtitle > h3 {
+    font-family: "DinProCondensed", Arial, Helvetica;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+.banner-menu{
+    position: absolute;
+    right:5%;
+    top:20%;
+    display: flex;
+    z-index: 2;
+    color:white;
+    flex-direction: column;
+    text-align: right;
+    width: 10vw;
+}
+.banner-menu-item{
+    margin-top: 0.8rem;
+    cursor: pointer;
+}
+.banner-menu-item:hover{
+    color: red;
+}
+.red-menu-item{
+    color:red;
+}
+.banner-arrow{
+    position: absolute;
+    left:50%;
+    bottom:5%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 2;
+}
+.banner-text h2, .banner-text h3{
+    margin:0;
+}
+/* WE ARE */
+.we-are{
+    background: white;
+    justify-content: space-around;
+    align-items: center;
+}
+.title{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.video{
+    width: 30%;
+    height: 400px;
+    display: flex;
+    position: relative;
+    background: black;
+}
+.we-are-text{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.text-title{
+    width: 60%;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.small-text{
+    width: 50%;
+    margin-bottom: 1.5rem;
+}
+.more{
+    display: flex;
+}
+/* WE CREATE */
+.we-create{
+    background: #edeef0;
+    justify-content: space-around;
+    align-items: center;
+}
+.title, .design, .branding, .web, .rrss{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.we-create > .title, .we-create >  .design, .we-create >  .branding, .we-create >  .web, .we-create >  .rrss {
+    width: 15%;
+    height: auto;
+}
+.title{
+    justify-content: center;
+}
+.number{
+    font-family: "DinProCondensed", Arial, Helvetica;
+    font-weight: bold;
+    font-size: 2.2rem;
+    color: #e2e4e7;
+}
+.we-create .number{
+    color:white;
+}
+.name{
+    font-family: "DinProRegular", Arial, Helvetica;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #25303b;
+}
+.we-create-logo, .elipse{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.elipse-logo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.we-create-name{
+    text-align: center;
+    font-family: 'DinProMedium', Arial, sans-serif;
+    color: #25303b;
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+}
+/* PERCENTAGES */
+.percentages{
+    background: white;
+    height: 200px;
+}
+.percentage-container{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+}
+.percentage-item{
+    display: flex;
+    position: relative;
+    width: 20%;
+    height: 80%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.percentage-number{
+    font-family: "DinProCondensed", Arial, Helvetica;
+    font-weight: bold;
+    font-size: 2.2rem;
+    color: #25303b;
+}
+.percentage-name{
+    font-family: "DinProMedium", Arial, Helvetica;
+    font-size: 1rem;
+    color: #25303b;
+    text-transform: uppercase;
+}
+.percentage-line{
+    width: 1px;
+    height: 25px;
+    background: red;
+    display: flex;
+}
+/* LASTS POSTS */
+.lasts-posts{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+.lasts-posts-text{
+    height: 5%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "DinProCondensed", Arial, Helvetica;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #25303b;
+    text-transform: uppercase;
+}
+.posts-container{
+    height: 85%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.post{
+    width: 15%;
+    height: 40%;
+    margin: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+.post-text-container{
+    z-index: 1;
+    position: relative;
+    width: 80%;
+    padding: 0 10%;
+    background: black;
+    color: white;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.post-date{
+    font-family: 'DinProCondensed', Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+.post-title{
+    font-family: 'DinProCondensed', Arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.4rem;
+    width: 80%;
+}
+.post-description{
+    opacity: 0;
+}
+.post-image{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.post:hover{
+    cursor: pointer;
+}
+.post-image{
+    object-fit: cover;
+}
+.expand-post{
+    height: 60%;
+}
+.show-post{
+    opacity: 1;
+}
+.red-title{
+    color:red;
+}
+/* Footer */
+.site-footer{
+    background-color: black;
+    width: 100%;
+    height: 150px;
+    z-index: 3;
+    position: relative;
+    display:flex;
+    justify-content: space-around;
+}
+.contact-icons,
+.logo-container,
+.center-text {
+    width: 33%;
+    height: 100%;
+    display:flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.center-text{
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.center-text div{
+    font-size: 0.8rem;
+}
+.contact-icons{
+    flex-direction: column;
+}
+.icons-footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 300px;
+}
+.red-text{
+    color:red;
+    font-size: 18px;
+    text-align: center;
 }

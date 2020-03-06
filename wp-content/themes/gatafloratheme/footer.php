@@ -20,7 +20,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/resources/whatsapp-icon.png" alt="">
             </div>
             <div class="ig-div">
-                <img src="<?php echo get_template_directory_uri(); ?>/resources/IG-icon.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/resources/ig-icon.png" alt="">
             </div>
         </div>
         <div class="red-text">

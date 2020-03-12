@@ -15,6 +15,11 @@ Text Domain: gatafloratheme
 }
 @font-face {
     font-family: "DinProCondensed";
+    src: url("resources/fonts/DINPro-CondLight.otf");
+    font-weight: lighter;
+}
+@font-face {
+    font-family: "DinProCondensed";
     src: url("resources/fonts/DINPro-CondMedium.otf");
     font-weight: normal;
 }
@@ -63,6 +68,8 @@ img{
 ul{
     text-decoration: none;
     list-style: none;
+    margin:0;
+    padding:0;
 }
 a{
     text-decoration: none;
@@ -161,7 +168,6 @@ a{
     width: 100%;
     height: auto;
     position: relative;
-    background-color: royalblue;
 }
 /* Banner */
 .banner-section{
@@ -174,6 +180,11 @@ a{
     transform: translateX(-40%);
     display: flex;
     z-index: 2;
+}
+.banner-logo-about{
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
 }
 .banner-image{
     position: absolute;
@@ -193,6 +204,11 @@ a{
     flex-direction: column;
     text-align: center;
     width: 25vw;
+}
+.banner-text-about{
+    bottom: unset;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .banner-title > h2{
     font-family: "DinProCondensed", Arial, Helvetica;
@@ -237,11 +253,89 @@ a{
 .banner-text h2, .banner-text h3{
     margin:0;
 }
+/* BANNER TEMPLATE */
+.banner-template{
+    background: black;
+}
+.banner-text-template{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.banner-template-top-light-text{
+    color:white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'DinProCondensed';
+    font-weight: lighter;
+}
+.banner-template-main-title{
+    color: white;
+    text-transform: uppercase;
+    font-size: 46px;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.banner-template-sub-title{
+    color:white;
+}
+.banner-template-button-container{
+    display: flex;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    margin-bottom: 50px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner-template-button{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: black;
+    border: 1px white solid;
+    text-transform: uppercase;
+}
+.banner-template-button:hover{
+    color: #d1d2d3;
+    background-color: white;
+}
+.banner-template-logo-container{
+    display: flex;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    justify-content: space-between;
+    right: 0;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.banner-template-image{
+    position: absolute;
+    width: 450px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.blog-title{
+    top: 80%;
+}
 /* WE ARE */
 .we-are{
     background: white;
     justify-content: space-around;
     align-items: center;
+    height: 400px;
 }
 .title{
     width: 20%;
@@ -252,7 +346,7 @@ a{
 }
 .video{
     width: 30%;
-    height: 400px;
+    height: 300px;
     display: flex;
     position: relative;
     background: black;
@@ -263,11 +357,14 @@ a{
     display: flex;
     position: relative;
     flex-direction: column;
+    justify-content: space-around;
 }
 .text-title{
     width: 60%;
-    font-size: 1.4rem;
+    font-size: 21px;
     margin-bottom: 1rem;
+    font-family: "DinProCondensed";
+    font-weight: bold;
 }
 .small-text{
     width: 50%;
@@ -275,6 +372,11 @@ a{
 }
 .more{
     display: flex;
+}
+.link-text{
+    font-size: 1rem;
+    font-family: "DinProCondensed";
+    font-weight: normal;
 }
 /* WE CREATE */
 .we-create{
@@ -299,16 +401,16 @@ a{
 .number{
     font-family: "DinProCondensed", Arial, Helvetica;
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 3rem;
     color: #e2e4e7;
 }
 .we-create .number{
     color:white;
 }
 .name{
-    font-family: "DinProRegular", Arial, Helvetica;
+    font-family: "DinProCondensed";
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.8rem;
     color: #25303b;
 }
 .we-create-logo, .elipse{
@@ -329,10 +431,12 @@ a{
 }
 .we-create-name{
     text-align: center;
-    font-family: 'DinProMedium', Arial, sans-serif;
+    font-family: 'DinProCondensed';
     color: #25303b;
-    font-size: 0.8rem;
+    font-size: 18px;
     margin-top: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 /* PERCENTAGES */
 .percentages{
@@ -363,12 +467,15 @@ a{
     font-weight: bold;
     font-size: 2.2rem;
     color: #25303b;
+    margin-bottom: 15px;
 }
 .percentage-name{
-    font-family: "DinProMedium", Arial, Helvetica;
-    font-size: 1rem;
+    font-family: "DinProCondensed";
+    font-weight: normal;
+    font-size: 20px;
     color: #25303b;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 .percentage-line{
     width: 1px;
@@ -398,6 +505,7 @@ a{
     font-size: 1.5rem;
     color: #25303b;
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 .posts-container{
     height: 85%;
@@ -418,7 +526,7 @@ a{
 }
 .post-text-container{
     z-index: 1;
-    position: relative;
+    position: absolute;
     width: 80%;
     padding: 0 10%;
     background: black;
@@ -427,6 +535,9 @@ a{
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+.blog-post-text-container{
+    position: relative;
 }
 .post-date{
     font-family: 'DinProCondensed', Arial, sans-serif;
@@ -466,6 +577,477 @@ a{
 .red-title{
     color:red;
 }
+/* Services */
+.services{
+    flex-direction: column;
+    justify-content: center;
+}
+.services-title{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 33px;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.services-display{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.services-item{
+    position: relative;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    max-width: 250px;
+    align-items: center;
+}
+.services-image{
+    width: 50%;
+    min-width: 80px;
+    max-width: 111px;
+}
+.services-name{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
+    margin-top: 31px;
+    margin-bottom: 28px;
+}
+.services-list-item{
+    margin-bottom: 18px;
+}
+/*Packages*/
+.packages{
+    flex-direction: column;
+    min-height: 700px;
+    height: auto;
+}
+.packages-title{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    max-width: 400px;
+    text-transform: uppercase;
+    font-size: 33px;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+}
+.packages-image{
+    min-width: 40px;
+    max-width: 78px;
+}
+.packages-subtitle{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    max-width: 400px;
+    margin-top: 28px;
+    margin-bottom: 37px;
+}
+.packages-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.packages-single{
+    width: 30%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #d3d3d3;
+    padding: 40px 20px;
+}
+.packages-single:hover{
+    border: 1px solid black;
+}
+.packages-line{
+    width: 50%;
+    min-width: 125px;
+    background: #dc1a41;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 43px;
+}
+.packages-type{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
+}
+.packages-price{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+}
+.packages-services-item{
+    min-width: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 0.5px solid #e8e7e7;
+}
+.packages-button, .packages-custom-button{
+    background-color: #2d343d;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'DinProCondensed';
+    font-weight: lighter;
+    border: none;
+    height: 30px;
+    width: 80px;
+}
+.packages-custom{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    position: relative;
+    border: 1px solid #d3d3d3;
+    padding: 50px 0px;
+    align-items: center;
+    margin-bottom: 81px;
+}
+.packages-custom:hover{
+    border: 1px solid black;
+}
+.packages-custom-title{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.packages-custom-top-text{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+    text-align: center;
+}
+.packages-custom-lower-text{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
+    text-align: center;
+}
+.packages-custom-name{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
+}
+.packages-custom-image{
+    width: 20%;
+    min-width: 40px;
+    max-width: 78px;
+}
+.packages-custom-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 33%;
+}
+.packages-custom-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+}
+.packages-custom-line{
+    width: 1px;
+    height: 100px;
+    background: #dc1a41;
+    display: flex;
+}
+/* About */
+.values{
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+}
+.values-entry, .values-first, .values-second{
+    display: flex;
+    width: 30%;
+    color: #25303b;
+}
+.values-entry{
+    font-size: 1.3rem;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+}
+.values-text{
+    width: 60%;
+    margin-top: 5px;
+}
+.values-number{
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+    margin-right: 10px;
+}
+.values-text-top{
+    font-size: 1.3rem;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+}
+.values-text-bottom{
+    font-size: 1.3rem;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
+}
+.values
+.blocks-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+.block{
+    width: 25%;
+    background-color: black;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+}
+.block-title,.block-text,.block-link{
+    padding: 30px;
+    color:white;
+}
+.block-title{
+    font-size: 1.4rem;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+}
+.block-text{
+    font-size: 1.1rem;
+}
+.block-link{
+    font-size: 1rem;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
+    display: flex;
+}
+.block-image{
+    display: flex;
+    overflow: hidden;
+}
+.block-image > img{
+    object-fit: cover;
+    object-position: top;
+}
+.blocks-container{
+    display: flex;
+    justify-content: space-between;
+}
+.motto-container{
+    width: 100%;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #edeef0;
+}
+.motto-logo{
+    width: 60px;
+    height: 78px;
+}
+.motto-text, .red-motto{
+    font-size: 1.6rem;
+    font-family: 'DinProCondensed';
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #25303b;
+}
+.red-motto{
+    color: #dc1a41;
+}
+/* CONTACT */
+.contact-button{
+    margin-top: 20px;
+}
+.contact-red-button{
+    border:none;
+    color: #dc1a41;
+    font-size: 0.8rem;
+    background: white;
+}
+.form{
+    height: 700px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-title{
+    width: 50%;
+    text-align: center;
+    max-width: 350px;
+    text-transform: uppercase;
+    font-size: 2.15rem;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.form-text{
+    max-width: 380px;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #444242;
+}
+.form-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.form-side-by-side{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-side-by-side input{
+    min-width: calc(300 - 8px);
+    width: 49%;
+    margin: 20px 0px;
+    font-size: 0.8rem;
+    font-family: 'DinProMedium';
+    color: #5b5b5f;
+    padding: 5px 1px;
+}
+.form-project{
+    width: calc(100% - 6px);
+    height: 200px;
+    resize: none;
+    margin:0;
+    font-size: 0.8rem;
+    font-family: 'DinProMedium';
+    color: #5b5b5f;
+    padding: 5px 0;
+}
+.contact-logo{
+    margin: 90px 0;
+}
+/* PAGE */
+.page-container{
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.page-title{
+    height: auto;
+    min-height: 200px;
+}
+/* BLOG */
+.logo{
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.post-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.post-block{
+    width: 22%;
+    display: flex;
+    position: relative;
+    margin: 0 25px;
+}
+.post-image{
+    position: relative;
+    display: flex;
+    height: 300px;
+}
+.black-block{
+    height: 120px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background:black;
+    justify-content: center;
+    z-index: 2;
+    bottom: 0;
+}
+.post-category{
+    color:white;
+    position: absolute;
+    background: black;
+    width: 50px;
+    height: auto;
+    top: -0.78rem;
+    font-size: 0.78rem;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.post-title{
+    color:white;
+    font-size: 1rem;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+    margin: 3px 10px;
+}
+.post-info{
+    display: flex;
+    margin: 3px 10px;
+    align-items: center;
+}
+.post-info > div{
+    font-size: 0.78rem;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
+}
+.post-excerpt{
+    color:white;
+    font-size: 0.85rem;
+    font-family: 'DinProCondensed';
+    font-weight: bold;
+    margin: 3px 10px;
+}
+.post-line{
+    height: 15px;
+    width: 1px;
+    background: white;
+    margin: 0 5px;
+}
+.post-author, .post-date{
+    color: white;
+}
+.blog-posts{
+    min-height: 300px;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.blog-posts-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
 /* Footer */
 .site-footer{
     background-color: black;
@@ -495,6 +1077,8 @@ a{
 }
 .center-text div{
     font-size: 0.8rem;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
 }
 .contact-icons{
     flex-direction: column;
@@ -505,10 +1089,12 @@ a{
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    max-width: 300px;
+    max-width: 250px;
 }
 .red-text{
-    color:red;
-    font-size: 18px;
+    color:#dc1a41;
+    font-size: 1.1rem;
     text-align: center;
+    font-family: 'DinProCondensed';
+    font-weight: normal;
 }

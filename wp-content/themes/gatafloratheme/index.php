@@ -46,7 +46,12 @@
         LGTF diseña experiencias digitales reflexivas y estéticas^^
         </div>
         <div class="small-text">
-        Creemos en las ideas y trabajamos con una fuerte orientación al diseño y la experiencia del usuario. Nos esforzamos para crear productos que se ajusten a cada cliente y su audiencia^^
+            Creemos en las ideas y trabajamos<br>
+            con una fuerte orientación al diseño<br>
+            y la experiencia del usuario.<br>
+            Nos esforzamos para crear productos<br>
+            que se ajusten a cada cliente y su<br>
+            audiencia^^.
         </div>
         <div class="more">
             <div class="link-text">

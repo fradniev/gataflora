@@ -6,7 +6,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<?php wp_head(); ?>
 </head>
-<body  <?php body_class(); ?>>
+<body  <?php body_class(); ?> onresize="fixMenu()">
 <?php wp_body_open(); ?>
 <div id="page" class="site"><!-- #page -->
 	<header id="masthead" class="site-header">
@@ -24,10 +24,10 @@
 					<img class="small-logo" src="<?php echo get_template_directory_uri(); ?>/resources/digital-factory.png" alt="">
 				</div>
 				<ul class="main-menu-list">
-					<li class="main-menu-item">Desarrollo Web</li>
-					<li class="main-menu-item">Estrategia RRSS</li>
-					<li class="main-menu-item">Diseño & Creatividad</li>
-					<li class="main-menu-item">Branding Digital</li>
+					<a href="<?php echo get_page_link( get_page_by_title( "Services" )->ID ); ?>"><li class="main-menu-item">Desarrollo Web^^</li></a>
+					<a href="<?php echo get_page_link( get_page_by_title( "Services" )->ID ); ?>"><li class="main-menu-item">Estrategia RRSS^^</li></a>
+					<a href="<?php echo get_page_link( get_page_by_title( "Services" )->ID ); ?>"><li class="main-menu-item">Diseño & Creatividad^^</li></a>
+					<a href="<?php echo get_page_link( get_page_by_title( "Services" )->ID ); ?>"><li class="main-menu-item">Branding Digital^^</li></a>
 				</ul>
 			</div>
 		</div>

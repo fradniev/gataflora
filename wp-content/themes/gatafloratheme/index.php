@@ -1,3 +1,4 @@
+<?php /* Template Name: Homepage */ ?>
 <?php get_header(); ?>
 <section class="banner-section">
     <div class="banner-logo">
@@ -20,9 +21,9 @@
     </div>
     <div class="banner-menu">
         <ul class="banner-menu-items">
-            <li class="banner-menu-item">Contacto<span class="red-menu-item">^^</span></li>
-            <li class="banner-menu-item">Portafolio<span class="red-menu-item">^^</span></li>
-            <li class="banner-menu-item">Blog<span class="red-menu-item">^^</span></li>
+            <a href="<?php echo get_page_link( get_page_by_title( "Contact" )->ID ); ?>"><li class="banner-menu-item">Contacto<span class="red-menu-item">^^</span></li></a>
+            <a href="<?php echo get_page_link( get_page_by_title( "Services" )->ID ); ?>"><li class="banner-menu-item">Portafolio<span class="red-menu-item">^^</span></li></a>
+            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><li class="banner-menu-item">Blog<span class="red-menu-item">^^</span></li></a>
         </ul>
     </div>
     <div class="banner-arrow">

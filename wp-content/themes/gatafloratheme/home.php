@@ -10,7 +10,7 @@ Template Name: Archives
     </div>
     <div class="banner-text banner-text-about blog-title">
         <div class="banner-title">
-            <h1><?php single_cat_title(); ?></h1>
+            <h1>Blog</h1>
         </div>
     </div>
     <div class="banner-menu">

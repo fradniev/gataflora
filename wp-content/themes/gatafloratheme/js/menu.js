@@ -34,3 +34,9 @@ function contractPost(el){
     post.getElementsByClassName("post-title")[0].classList.remove("red-title");
     post.getElementsByClassName("post-description")[0].classList.remove("show-post");
 }
+function fixMenu(){
+    let menuHeight = document.getElementById("masthead").scrollHeight;
+    document.getElementById("main-hidden-menu").style.top = "-"+((menuHeight/2)-70)+"px";
+    console.log(menuHeight/2);
+}
+window.onload = fixMenu;
